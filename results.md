@@ -1,6 +1,8 @@
 Data latency (with proxy): ~4ms, based on wireshark logs
+
 Scenario of data loss: 
 When turning off the application (manually or in case of some app error), the last batch that is saved in app cache will not be inserted into the database.
+
 Duplicate records: 
 There should be no duplicate with the logic of error handling, all the failed records from the batch are returned back to local cache and then added to the next batch. Even if somehow it went through, primary keys are resource_id and timestamp so the database would not allow it.
 
