@@ -7,4 +7,4 @@ There should be no duplicate with the logic of error handling, all the failed re
 Aggregation:
 Table with resource_id, response_status, cache_status, remote_addr, COUNT() as total requests, SUM(bytes sent), AVG(request_time_mili), updated for example once an hour.
 Estimates for clickhouse:
-1 row in http_log table is approximately 145B and 1 row in a aggregated table is approximately 60B. Given message rate of 1000 per second, the required space would be 1000 * 60 * 60 * 24 * 205B = 17,71GB/day.
+1 row in http_log table is approximately 145B and 1 row in an aggregated table is approximately 60B. Given message rate of 1000 per second, the required space would be 1000 * 60 * 60 * 24 * 205B = 17,71GB/day.
